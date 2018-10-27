@@ -57,15 +57,6 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {/// الفا كود | Emoko#0001
-     if (message.content === "$server-join") {
-         if(!message.channel.guild) return;
-     let embed = new Discord.RichEmbed()
-  .setColor("RANDOM") /// الفا كود | Emoko#0001
-  .addField("**!~[ عدد السيرفر التي يتواجد البوت بها  ]~! **" , client.guilds.size)
-  message.channel.sendEmbed(embed);
-    }/// الفا كود | Emoko#0001
-});
 
 
 
@@ -350,7 +341,6 @@ client.on('message', message => {
 .addField('     **─════════════ ⦁{✯الاوامر العامة✯}⦁ ════════════─** ' ,' ** ** ')
 .addField('     **→ معلومات حسابك ←** ' ,' **$id** ')
 .addField('     **→ سرعة استجابة البوت ←**  ' ,' **$ping** ')
-.addField('     **→ للحصول علي رابط البوت ←**  ' ,' **$invite** ')
 .addField('     **→ معلومات البوت ←** ' , '**$bot-info**') 
 .addField('     **→الافتار ←** ' ,' **$avatar**')
 .addField('     **→ تاريخ اليوم←** ' , '**$date**')
@@ -449,26 +439,7 @@ message.channel.send('**تم الارسال في الخاص**');
 
 
 
-client.on('message', message => {
-	var prefix = "$"
-if(message.content.startsWith(prefix + "invite")) { 
-message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`);
-}
-});
 
-
-client.on('message', message => {
-     if (message.content === "$invite") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
-     
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
