@@ -411,27 +411,7 @@ message.channel.send(image)
 
 
 
-  client.on('message', message => {
-	  var prefix = "$"
-    if (message.author.bot) return;
-     if (message.content === prefix + "bot-owner") {
 
-
- message.author.sendMessage(`
- 
-__TG_Pro__
-
-Created By : 󠀀Pro - ? M3roof#5981
-
-
-
-bot link : https://discordapp.com/oauth2/authorize?client_id=496501749926854657&scope=bot&permissions=388160
-`);
-
-message.channel.send('**تم الارسال في الخاص**');
-
-    }
-});
   
 
 
@@ -707,19 +687,7 @@ reaction3.on("collect", r => {
   
   
 
-client.on('guildDelete', guild => {
-    guild.members.forEach(c => {
-    let embed = new Discord.RichEmbed()
-        .setTitle(`**${guild.name} تم حذف السيرفر**`)
-        .setThumbnail(guild.iconURL)
-        .addField('الاسم', guild.name, true)
-        .addField('الاونر', guild.owner.user.username, true)
-        .addField('صنع في', guild.createdAt.toLocaleString(), true)
-        .setColor("RANDOM");
 
-        c.sendEmbed(embed)
-    })
-});
 
 
   
@@ -953,13 +921,7 @@ client.on('message', message => {
 
 
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('501459185423220804').roles.find("name", "Rainbow").setColor("RANDOM");
-    client.guilds.get('501459185423220804').roles.find("name", "⦁Fox_inviter⦁").setColor("RANDOM");
-  };
-  setInterval(lol, 10000);
-});
+
 
 
 
